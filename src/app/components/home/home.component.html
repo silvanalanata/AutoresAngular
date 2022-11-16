@@ -1,0 +1,35 @@
+<main class="contenedor">
+
+  <article class="autores">
+    <h1>Favorite Authors</h1>
+    <a [routerLink]="['/nuevoautor']">Add an author</a>
+    <h4>We have quotes by</h4>
+
+    <section class="filasTit">
+      <div class="nombre"><label>Author</label></div>
+      <div><label>Actions Available</label></div>
+    </section>
+
+    <section class="filas" *ngFor="let item of datos">
+      <div class="nombre"><label>{{item.nombre}}</label></div>
+      <div class="lineabtn">
+        <div><button [routerLink]="['/editarautor',item]">Edit</button></div>
+        <div class="space"></div>
+        <div><button (click)="deleteAutor(item._id)">Delete</button></div>
+      </div>
+
+    </section>
+
+
+    <br>
+
+    <div *ngIf="sindatos">
+
+      <div class="nombre"><label>No hay Autores, Favor ingrese uno aqui: </label></div>
+      <a [routerLink]="['/nuevoautor']">Add an author</a>
+
+
+    </div>
+  </article>
+
+</main>

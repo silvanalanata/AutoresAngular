@@ -1,0 +1,100 @@
+main {
+
+  top: 55px;
+  left: 0;
+  right: 0;
+  display: flex;
+
+}
+
+.button, button {
+background-color: cadetblue;
+border-radius: 25px;
+color: white;
+cursor: pointer;
+border: none;
+font-size: 20px;
+width: 150px;
+text-align: center;
+}
+
+.button:hover, button:hover {
+  background-color: rgb(8, 54, 54)
+}
+
+a {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.button:disabled, button:disabled {
+opacity: 0.5;
+cursor: auto;
+}
+
+.autores{
+
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 800px;
+  margin-top: 60px;
+  margin-left: 100px;
+  padding: 30px;
+
+}
+
+
+
+.lineabtn {
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-end;
+flex-wrap: nowrap;
+
+}
+
+.filasTit{
+background-color: gray;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: nowrap;
+padding: 30px;
+}
+.filas{
+border: 1px solid black;
+border: 1px solid rgb(157, 154, 154);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: nowrap;
+padding: 30px;
+}
+
+.nombre{
+
+  display: flex;
+  width: 50%;
+
+}
+
+.space{
+width: 20px;
+
+}
+
+h4{
+  color: purple;
+}

@@ -1,0 +1,56 @@
+.nuevo{
+  border: 2px solid grey;
+  display:flex;
+  flex-direction: column;
+  width: 400px;
+}
+.new-button{
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.input-name{
+  margin-top: 20px;
+  font-size: 20px;
+}
+.input{
+  margin-left: 20px;
+}
+label{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.row-button{
+  display: flex;
+  flex-direction: row;
+
+}
+
+a{
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+
+button{
+  background-color: cadetblue;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  width: 150px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+ button:hover {
+  background-color: rgb(8, 54, 54)
+}
+
+h4{
+  color: purple;
+}

@@ -1,0 +1,15 @@
+<h1>Favorite Authors</h1>
+
+<a [routerLink]="['/home']">Home</a>
+<h4>Add a new Author:</h4>
+<section class="nuevo">
+  <form  [formGroup]="formNuevoAutor" (ngSubmit)="NuevoAutor()">
+  <label> Name: </label>
+  <input class="input-name" type="text" name="nombre" formControlName="nombre"/>
+  <div class="row-button">
+   <div>  <button [routerLink]="['/home']"class="new-button" type="submit" value="Cancel" > Cancel </button> </div>
+   <div>  <button class="new-button" type="submit" value="Submit" > Submit</button> </div>
+  </div>
+  </form>
+</section>
+<div class="errorMsg">{{mensajeErr}}</div>

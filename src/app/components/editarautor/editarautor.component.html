@@ -1,0 +1,20 @@
+<h1>Favorite Authors</h1>
+
+<a [routerLink]="['/home']">Home</a>
+<h4>Edit this Author:</h4>
+<section class="nuevo">
+
+  <label> Name: </label>
+  <div class="input">
+    <input class="input-name" type="text"  name="nombre"  [(ngModel)]="autorData.nombre" value="{{autorData.nombre}}" />
+  </div>
+  <div class="row-button">
+    <div> <button [routerLink]="['/home']" type="submit" value="Cancel" > Cancel </button> </div>
+    <div> <button (click)="editarAutor()">Submit</button></div>
+  </div>
+
+  <br>
+
+        <div class="errorMsg">{{mensajeErr}}</div>
+
+</section>
