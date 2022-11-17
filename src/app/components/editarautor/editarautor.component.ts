@@ -15,19 +15,13 @@ export class EditarautorComponent implements OnInit {
   autorParams : any
   mensajeErr: String = ''
 
-
-  constructor(private datosService: DatosService,  private _router: Router, private _activeRouter: ActivatedRoute) {
-
-  }
+  constructor(private datosService: DatosService,  private _router: Router, private _activeRouter: ActivatedRoute) {}
 
   ngOnInit(): void {
-
-
     this.parametros = this._activeRouter.params
     this.autorParams = this.parametros._value
     this.autorData.nombre= this.autorParams.nombre //genera un objeto nuevo autor
     this.autorData.id = this.autorParams._id
-
   }
 
 
@@ -40,9 +34,17 @@ export class EditarautorComponent implements OnInit {
     }else{
 
           let observable = this.datosService.updateAutor(this.autorData);
-            observable.subscribe(data => {
+           observable.subscribe({
+            next: (result) => {
+              this.datos = result
               this._router.navigate(['/home']);
-            });
+            },
+            error: (error) => {
+              if (error.error) {
+                this.mensajeErr = "dato no valido"
+              }
+            }
+          })
 
     }
 

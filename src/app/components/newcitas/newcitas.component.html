@@ -1,9 +1,9 @@
 <a [routerLink]="['/home']">Home</a>
-<h4>Add a new Author:</h4>
+<h4>Provide a quote by : </h4>
 <section class="nuevo">
-  <form  [formGroup]="formNuevoAutor" (ngSubmit)="NuevoAutor()">
-  <label> Name: </label>
-  <input class="input-name" type="text" name="nombre" formControlName="nombre"/>
+  <form  [formGroup]="formNuevaCita" (ngSubmit)="NuevaCita()">
+  <label> Quote: </label>
+  <input class="input-name" type="text" name="cita" formControlName="cita"/>
   <div class="row-button">
    <div>  <button [routerLink]="['/home']"class="new-button" type="submit" value="Cancel" > Cancel </button> </div>
    <div>  <button class="new-button" type="submit" value="Submit" > Submit</button> </div>
@@ -11,4 +11,3 @@
   </form>
 </section>
 <div class="errorMsg">{{mensajeErr}}</div>
-

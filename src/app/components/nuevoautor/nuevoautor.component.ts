@@ -13,6 +13,7 @@ export class NuevoautorComponent implements OnInit {
   datos: any
   mensajeErr: String = ""
 
+
   constructor(private datosService: DatosService, private formBuilder: FormBuilder, private _router: Router) {
 
   }
@@ -25,27 +26,30 @@ export class NuevoautorComponent implements OnInit {
     })
 
   }
-  NuevoAutor(){
-    const {nombre} = this.formNuevoAutor.value
-    if(nombre ==""){
-      this.mensajeErr ='El nombre del autor es requerido'
-    }else if(nombre.length < 3){
-      this.mensajeErr ='El nombre del autor debe tener al menos 3 caracteres.'
-    }else{
+  NuevoAutor() {
+    const { nombre } = this.formNuevoAutor.value
+    if (nombre == "") {
+      this.mensajeErr = 'El nombre del autor es requerido'
+    } else if (nombre.length < 3) {
+      this.mensajeErr = 'El nombre del autor debe tener al menos 3 caracteres.'
+    } else {
 
       let tempObservable = this.datosService.postNuevoAutor(nombre)
-      tempObservable.subscribe( result => {this.datos = result
-        this._router.navigate(['/home']);
-      }
+      tempObservable.subscribe({
+        next: (result) => {
+          this.datos = result
+          this._router.navigate(['/home']);
+          console.log("mensaje ", result)
+        },
+        error: (error) => {
+          if (error.error) {
+            this.mensajeErr = "dato no valido"
 
-        )
-
+          }
+        }
+      })
 
     }
-
-
-
-
-   }
+  }
 
 }

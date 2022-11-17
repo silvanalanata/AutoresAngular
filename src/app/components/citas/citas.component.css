@@ -1,0 +1,53 @@
+.filas{
+  border: 1px solid black;
+  border: 1px solid rgb(157, 154, 154);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 30px;
+  }
+  .filasTit{
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 30px;
+    }
+
+    h4{
+      color: purple;
+    }
+
+    .botones{
+      display: flex;
+      justify-content: right;
+    }
+    button {
+      background-color: cadetblue;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      width: 150px;
+      text-align: center;
+      }
+
+    button:hover {
+        background-color: rgb(8, 54, 54)
+      }
+
+      a {
+        cursor: pointer;
+        color: blue;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }

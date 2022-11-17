@@ -9,7 +9,10 @@ import { EditarautorComponent } from './components/editarautor/editarautor.compo
 import { HomeComponent } from './components/home/home.component';
 import { DatosService } from './services/datos.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { CitasComponent } from './components/citas/citas.component';
+import { NewcitasComponent } from './components/newcitas/newcitas.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component'
 
 
 
@@ -19,7 +22,10 @@ import {HttpClientModule} from '@angular/common/http'
     PagesnotfoundComponent,
     NuevoautorComponent,
     EditarautorComponent,
-    HomeComponent
+    HomeComponent,
+    CitasComponent,
+    NewcitasComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

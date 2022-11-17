@@ -8,7 +8,11 @@ export const environment = {
   servicesURLnuevoAutor : "http://localhost:8000/postNuevo",
   servicesURLdelete : "http://localhost:8000/deleteId",
   servicesURLupdate : "http://localhost:8000/putUpdateId",
-  servicesURGetById : "http://localhost:8000/getId"
+  servicesURLGetById : "http://localhost:8000/getId",
+  servicesURLCitasById : "http://localhost:8000/citasAll",
+  servicesURLDeleteCitasById: "http://localhost:8000/citasdelete",
+  servicesURLnewcita: "http://localhost:8000/nuevacita",
+  servicesURLupdateVotos: "http://localhost:8000/voteup"
 };
 
 

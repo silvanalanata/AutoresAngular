@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   sindatos: boolean= false
 
 
-  constructor(private datosService: DatosService) {
+  constructor(private datosService: DatosService,private _router: Router) {
 
   }
 
@@ -31,12 +32,20 @@ export class HomeComponent implements OnInit {
 
   }
 
+
+  retornarCitas(id:String){
+
+
+      this._router.navigate(['citas/' + id]);
+
+  }
   deleteAutor(_id: String){
+    console.log("id delete",_id)
     this.datosService.deleteAutor(_id)
-    .subscribe( result =>  this.datos2 = result)
-    console.log(_id)
-    console.log(this.datos2)
+    .subscribe( result =>  this.datos = result)
+      this.datos = Array.of(this.datos)
     this.retornarAutores()
   }
+
 
 }

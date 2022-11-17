@@ -1,0 +1,31 @@
+
+
+<a [routerLink]="['/home']">Home</a>
+
+ <a [routerLink]="['/newcitas', id_autor]">Add a Quote</a>
+<!--<button (click)="AddQuote()">Add a Quote</button>-->
+
+ <h4>Quotes by {{nombre}} </h4>
+ <section class="filasTit">
+  <div class="nombre"><label>Quote</label></div>
+  <div class="nombre">Votes</div>
+  <div><label>Actions Available</label></div>
+</section>
+
+
+<section class="filas" *ngFor="let item of citas">
+
+<h2>{{item.cita}}</h2>
+<h2>{{item.votos}}</h2>
+<div class="botones">
+<div><button (click)="votar(item,'+')">Vote Up</button></div>
+<div><button (click)="votar(item,'-')">Vote Down</button></div>
+<div><button (click)="deteleCitas(item._id)">Delete</button></div>
+</div>
+
+
+</section>
+
+<div *ngIf="sindatos">
+  <div class="nombre"><label>No hay citas para este autor </label></div>
+</div>

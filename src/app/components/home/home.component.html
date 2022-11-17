@@ -1,7 +1,7 @@
 <main class="contenedor">
 
   <article class="autores">
-    <h1>Favorite Authors</h1>
+
     <a [routerLink]="['/nuevoautor']">Add an author</a>
     <h4>We have quotes by</h4>
 
@@ -13,9 +13,11 @@
     <section class="filas" *ngFor="let item of datos">
       <div class="nombre"><label>{{item.nombre}}</label></div>
       <div class="lineabtn">
-        <div><button [routerLink]="['/editarautor',item]">Edit</button></div>
+      <div><button [routerLink]="['/editarautor',item]">Edit</button></div>
+      <div><button (click)="retornarCitas(item._id)">View Quotes</button></div>
+      <div><button (click)="deleteAutor(item._id)">Delete Autor</button></div>
         <div class="space"></div>
-        <div><button (click)="deleteAutor(item._id)">Delete</button></div>
+
       </div>
 
     </section>
